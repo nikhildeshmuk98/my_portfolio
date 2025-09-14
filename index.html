@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- background bubbles-->
+     <div class="bubbles"></div>
+     <!--navigation-->
+    <nav class="glass-nav">
+  <div class="nav-left">
+   <!-- Profile Image -->
+ <img src="images/nikky.jpg" alt="Profile" class="profile-img">
+
+    <span class="profile-name">Nikhil Dandolu</span>
+  </div>
+  <div class="nav-right">
+   <a href="#home" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;margin:5px;border-radius:12px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);color:#fff;text-decoration:none;font-weight:500;">
+  <i class="fas fa-home"></i> Home
+</a>
+<a href="#about" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;margin:5px;border-radius:12px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);color:#fff;text-decoration:none;font-weight:500;">
+  <i class="fas fa-user"></i> About
+</a>
+<a href="#skills" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;margin:5px;border-radius:12px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);color:#fff;text-decoration:none;font-weight:500;">
+  <i class="fas fa-code"></i> Skills
+</a>
+<a href="#projects" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;margin:5px;border-radius:12px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);color:#fff;text-decoration:none;font-weight:500;">
+  <i class="fas fa-briefcase"></i> Projects
+</a>
+<a href="#certifications" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;margin:5px;border-radius:12px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);color:#fff;text-decoration:none;font-weight:500;">
+  <i class="fas fa-certificate"></i> Certifications
+</a>
+<a href="#contact" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;margin:5px;border-radius:12px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);color:#fff;text-decoration:none;font-weight:500;">
+  <i class="fas fa-envelope"></i> Contact
+</a>
+
+  </div>
+  <!-- Theme Toggle Button -->
+<div class="theme-toggle" onclick="toggleTheme()">
+  <i id="theme-icon" class="fas fa-moon"></i>
+</div>
+
+  
+
+</nav>
+
+     <!-- Home Section -->
+<section id="home" class="home-section" 
+  style="width:90%; margin:100px auto; padding:60px 40px; background:rgba(255,255,255,0.1); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; color:#fff; box-shadow:0 8px 30px rgba(255,105,180,0.3);">
+
+  <div class="home-container">
+    <!-- Left Side -->
+    <div class="home-left">
+      <h2>Hi, I'm <span class="name">Nikhil Dandolu</span></h2>
+      <h3 class="typing-text"></h3>
+      <div class="hero-buttons">
+        <a href="resume.pdf" target="_blank" class="btn btn-primary">Resume</a>
+        <a href="#contact" class="btn">Contact</a>
+      </div>
+    </div>
+
+   <!-- Right Side -->
+<div class="home-right">
+  <div class="profile-wrap">
+    <img src="images/nikky.jpg" alt="Profile" class="home-profile-pic">
+
+    <!-- Social Icons (always below profile) -->
+    <div class="social-icons">
+ <div class="icon-card small-card">
+  <a href="https://github.com/nikhildeshmuk98" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+
+<div class="icon-card small-card">
+  <a href="https://www.linkedin.com/in/nikhil-deshmuk-a9122b33b" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
+</div>
+
+<div class="icon-card small-card">
+  <a href="https://wa.me/916309872249" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<div class="icon-card small-card">
+  <a href="mailto:nikhildeshmuk98@gmail.com" target="_blank">
+    <i class="fas fa-envelope"></i>
+  </a>
+</div>
+
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+</section>
+<!-- About Section -->
+<!-- About Section -->
+<section id="about" class="about-section" 
+  style="width:100%; min-height:100vh; padding:60px 10%; color:#fff; display:flex; flex-direction:column; align-items:center; gap:50px;
+         background:rgba(255,255,255,0.08);
+         backdrop-filter:blur(15px);
+         -webkit-backdrop-filter:blur(15px);
+         border:1px solid rgba(255,255,255,0.25);
+         border-radius:25px;
+         box-shadow:0 8px 40px rgba(255,105,180,0.3);">
+
+
+  <!-- Heading -->
+  <h1 style="text-align:center; font-size:3rem; margin-bottom:20px; position:relative; display:inline-block;">
+    About Me
+    <span style="display:block; width:80px; height:4px; background:linear-gradient(45deg, #ff8acb, #d63384); margin:10px auto 0; border-radius:2px;"></span>
+  </h1>
+
+  <!-- Main Content: Profile + Description -->
+  <div style="display:flex; justify-content:center; align-items:center; gap:50px; flex-wrap:wrap; width:100%; max-width:1200px;">
+
+    <!-- Left: Profile Image -->
+    <div style="flex:1; text-align:center;">
+      <img src="images/nikky.jpg" alt="Profile" style="width:300px; height:300px; object-fit:cover; border-radius:50%; border:5px solid rgba(255,255,255,0.3); box-shadow:0 0 50px rgba(255,105,180,0.6);">
+    </div>
+
+    <!-- Right: Description -->
+    <div style="flex:1; font-size:1.1rem; line-height:1.6;">
+      <p>
+        A passionate B.Tech Information Technology student (2022 - 2026) at NBKR Institute of Science & Technology.
+      </p>
+      <p>
+        As an IT professional with expertise in the Full Stack Development,software engineering and problem-sloving.Dedicated to create innovative solutions that make a difference.
+      </p>
+      <p>
+        I am proficient in Python, flask, HTML, CSS, JavaScript, MySQL, and modern web technologies.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Personal Detail Cards -->
+  <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:30px; width:100%; max-width:1200px;">
+
+    <!-- Card 1: My Details -->
+   <div style="flex:1; min-width:250px; background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:20px; box-shadow:0 8px 30px rgba(255,105,180,0.3); text-align:center;">
+  <h3 style="text-align:center; margin-bottom:15px;">My Details</h3>
+  <ul style="list-style:none; padding-left:0; line-height:2; color:#fff; display:flex; flex-direction:column; align-items:center; gap:10px; margin:0;">
+<ul class="glass-card">
+  <li><strong>Name:</strong> Nikhil Dandolu</li>
+  <li><strong>DOB:</strong> 14/02/2004</li>
+  <li><strong>Age:</strong> <span id="age"></span></li>
+  <li><strong>Gender:</strong> Male</li>
+</ul>
+
+<script>
+  // 🎂 Your DOB (Year, Month (0 = Jan), Day)
+  const dob = new Date(2004, 1, 14); // ✅ Month should be 1 for Feb (0=Jan)
+  
+  function calculateAge() {
+    const today = new Date();
+    let age = today.getFullYear() - dob.getFullYear();
+
+    // check if birthday has passed this year
+    const hasBirthdayPassed =
+      today.getMonth() > dob.getMonth() ||
+      (today.getMonth() === dob.getMonth() && today.getDate() >= dob.getDate());
+
+    if (!hasBirthdayPassed) {
+      age--; // subtract 1 if birthday not reached yet
+    }
+
+    document.getElementById("age").textContent = age;
+  }
+
+  calculateAge();
+</script>
+
+
+
+  </ul>
+</div>
+
+
+    <!-- Card 2: Contact Details -->
+    <div style="flex:1; min-width:250px; background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:20px; box-shadow:0 8px 30px rgba(255,105,180,0.3);">
+      <h3 style="text-align:center; margin-bottom:15px;">Contact Details</h3>
+      <ul style="list-style:none; padding-left:0; line-height:2; color:#fff;">
+   <div class="contact-card">
+  <ul>
+    <li>
+      <a href="mailto:nikhildeshmuk98@gmail.com" style="color:#fff; text-decoration:none; display:flex; align-items:center; gap:8px;">
+        <i class="fas fa-envelope"></i>
+        <span>nikhildeshmuk98@gmail.com</span>
+      </a>
+    </li>
+    <li>
+      <a href="tel:+916309872249" style="color:#fff; text-decoration:none; display:flex; align-items:center; gap:8px;">
+        <i class="fas fa-phone"></i>
+        <span>+91 6309872249</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.google.com/maps/place/Muttem+Baka+Village" target="_blank" style="color:#fff; text-decoration:none; display:flex; align-items:center; gap:8px;">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Muttem Baka Village</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://in.linkedin.com/in/nikhil-dandolu-a9122b33b" target="_blank" style="color:#fff; text-decoration:none; display:flex; align-items:center; gap:8px;">
+        <i class="fab fa-linkedin"></i>
+        <span>Nikhil Dandolu</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+
+      </ul>
+    </div>
+
+    <!-- Card 3: Hobbies -->
+    <div style="flex:1; min-width:250px; background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:20px; box-shadow:0 8px 30px rgba(255,105,180,0.3);">
+      <h3 style="text-align:center; margin-bottom:15px;">Hobbies</h3>
+      <ul style="list-style:none; padding-left:0; line-height:2; color:#fff;">
+       <ul class="hobbies-card">
+  <li>Reading</li>
+  <li>Coding</li>
+  <li>Gaming</li>
+  <li>Traveling</li>
+  <li>Music</li>
+</ul>
+
+      </ul>
+    </div>
+
+<!-- Educational Background Section -->
+<section id="education" 
+  style="width:100%; padding:60px 10%; color:#fff; display:flex; flex-direction:column; align-items:center; gap:50px;
+         background:rgba(255,255,255,0.05);
+         backdrop-filter:blur(15px);
+         -webkit-backdrop-filter:blur(15px);
+         border:1px solid rgba(255,255,255,0.2);
+         border-radius:25px;
+         box-shadow:0 8px 40px rgba(255,105,180,0.3);">
+
+
+  <!-- Heading -->
+  <h1 style="text-align:center; font-size:3rem; margin-bottom:40px; position:relative; display:inline-block;">
+    My Educational Background
+    <span style="display:block; width:120px; height:4px; background:linear-gradient(45deg, #ff8acb, #d63384); margin:10px auto 0; border-radius:2px;"></span>
+  </h1>
+
+  <!-- Cards Container -->
+  <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:30px; width:100%; max-width:1200px;">
+
+    <!-- Card 1: B.Tech -->
+    <div style="flex:1; min-width:250px; background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:25px; box-shadow:0 8px 30px rgba(255,105,180,0.3); text-align:center;">
+  <i class="fas fa-university" style="font-size:40px; margin-bottom:10px;"></i>
+      <h3 style="margin-bottom:15px;">Bachelor of Technology</h3>
+      <ul style="list-style:none; padding-left:0; line-height:2; color:#fff;">
+        <li><strong>College:</strong> NBKR Institute of Science & Technology</li>
+        <li><strong>Location:</strong> Vidyanagar,Ap[India]</li>
+        <li><strong>Branch:</strong> Information Technology</li>
+        <li><strong>CGPA:</strong> 7.31</li>
+        <li><strong>Year:</strong> 2022 – 2026</li>
+      </ul>
+    </div>
+
+    <!-- Card 2: College -->
+    <div style="flex:1; min-width:250px; background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:25px; box-shadow:0 8px 30px rgba(255,105,180,0.3); text-align:center;">
+    <i class="fas fa-graduation-cap" style="font-size:40px; margin-bottom:10px;"></i>
+      <h3 style="margin-bottom:15px;">Intermediate</h3>
+      <ul style="list-style:none; padding-left:0; line-height:2; color:#fff;">
+        <li><strong>College:</strong> Srinivasa Junior College</li>
+        <li><strong>Location:</strong> Vidyanagar,Ap[India]</li>
+        <li><strong>Stream:</strong> MPC</li>
+        <li><strong>Percentage:</strong> 80.4%</li>
+        <li><strong>Year:</strong> 2020 – 2022</li>
+      </ul>
+    </div>
+
+    <!-- Card 3: School -->
+    <div style="flex:1; min-width:250px; background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:25px; box-shadow:0 8px 30px rgba(255,105,180,0.3); text-align:center;">
+  <i class="fas fa-school" style="font-size:40px; margin-bottom:10px;"></i>
+      <h3 style="margin-bottom:15px;">High School</h3>
+      <ul style="list-style:none; padding-left:0; line-height:2; color:#fff;">
+        <li><strong>School:</strong> Balabharathi High School</li>
+        <li><strong>Location:</strong> Vidyanagar,Ap[India]</li>
+        <li><strong>Grade:</strong> 9.8</li>
+        <li><strong>Year:</strong> 2020</li>
+
+      </ul>
+    </div>
+<!-- Family Details Section -->
+<section id="family" 
+  style="width:100%; padding:60px 10%; color:#fff; display:flex; flex-direction:column; align-items:center; gap:50px;
+         background: rgba(255,255,255,0.08);
+         backdrop-filter: blur(15px);
+         -webkit-backdrop-filter: blur(15px);
+         border: 1px solid rgba(255,255,255,0.25);
+         border-radius: 25px;
+         box-shadow: 0 8px 40px rgba(255,105,180,0.3);">
+  <!-- Heading -->
+  <h1 style="text-align:center; font-size:3rem; margin-bottom:20px; position:relative; display:inline-block;">
+  Family Details
+  <span style="display:block; width:120px; height:4px; background:linear-gradient(45deg, #ff8acb, #d63384); margin:10px auto 0; border-radius:2px;"></span>
+</h1>
+
+<p style="text-align:center; max-width:700px; margin:0 auto 40px; font-size:1.2rem; line-height:1.8; color:#f1f1f1;">
+  Beyond my professional life, I come from a loving family that has always supported my dreams and ambitions. 
+  Here are the most important people in my life💗.
+</p>
+
+  <!-- Cards Container -->
+  <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:30px; width:100%; max-width:1200px;">
+
+    <!-- Card 1: Father -->
+   <!-- Card Container -->
+<div style="flex:1; min-width:250px; perspective:1000px;">
+  <div class="family-card">
+    
+    <!-- Front Side -->
+    <div class="card-front">
+      <img src="images/nana.jpg" alt="Father" style="width:120px; height:120px; object-fit:cover; border-radius:50%; border:3px solid rgba(255,255,255,0.3); box-shadow:0 0 20px rgba(255,105,180,0.6); margin-bottom:15px;">
+      <h4 style="margin-bottom:5px;">Karunakar Dandolu</h4>
+      <p style="margin:0;">Father</p>
+      <p style="margin:0;">Age: 50</p>
+       <p style="margin:0;">Occupation:Farmer</p>
+    </div>
+    
+    <!-- Back Side -->
+    <div class="card-back">
+      <h4 style="margin-bottom:10px;">More About Him</h4>
+      <p style="margin:0; font-size:0.95rem; line-height:1.5;">
+        My father, Karunakar Dandolu, is a dedicated farmer whose hard work and perseverance inspire me every day. He nurtures both the land and our family with love and strength, teaching me the true value of discipline, honesty, and resilience.
+    </div>
+    
+  </div>
+</div>
+
+   <!-- Card 2: Mother -->
+<div style="flex:1; min-width:250px; perspective:1000px;">
+  <div class="family-card">
+    
+    <!-- Front Side -->
+    <div class="card-front">
+      <img src="images/amma.jpg" alt="Mother" style="width:120px; height:120px; object-fit:cover; border-radius:50%; border:3px solid rgba(255,255,255,0.3); box-shadow:0 0 20px rgba(255,105,180,0.6); margin-bottom:15px;">
+      <h4 style="margin-bottom:5px;">Sujatha Dandolu</h4>
+      <p style="margin:0;">Mother</p>
+      <p style="margin:0;">Age: 48</p>
+       <p style="margin:0;">Occupation:Home Maker</p>
+    </div>
+    
+    <!-- Back Side -->
+    <div class="card-back">
+      <h4 style="margin-bottom:10px;">More About Her</h4>
+      <p style="margin:0; font-size:0.95rem; line-height:1.5;">
+        My mother, Sujatha Dandolu, is the heart of our family.  
+        With her endless love, patience, and wisdom,  
+        she has always been my greatest source of comfort and inspiration.
+      </p>
+    </div>
+    
+  </div>
+</div>
+
+  <!-- Card 3: Sister -->
+<div style="flex:1; min-width:250px; perspective:1000px;">
+  <div class="family-card">
+    
+    <!-- Front Side -->
+    <div class="card-front">
+      <img src="images/chelli.jpg" alt="Sister" style="width:120px; height:120px; object-fit:cover; border-radius:50%; border:3px solid rgba(255,255,255,0.3); box-shadow:0 0 20px rgba(255,105,180,0.6); margin-bottom:15px;">
+      <h4 style="margin-bottom:5px;">Divya Dandolu</h4>
+      <p style="margin:0;">Sister</p>
+      <p style="margin:0;">Age: 20</p>
+      <p style="margin:0;">Occupation:Student</p>
+    </div>
+    
+    <!-- Back Side -->
+    <div class="card-back">
+      <h4 style="margin-bottom:10px;">More About Her</h4>
+      <p style="margin:0; font-size:0.95rem; line-height:1.5;">
+        My sister, Divya Dandolu, is the joy of our family.  
+        With her innocence, laughter, and endless curiosity,  
+        she fills our home with happiness and love every day.
+      </p>
+    </div>
+    
+  </div>
+</div>
+
+    <!-- Card 4: Brother -->
+<div style="flex:1; min-width:250px; perspective:1000px;">
+  <div class="family-card">
+    
+    <!-- Front Side -->
+    <div class="card-front">
+      <img src="images/nikky.jpg" alt="Brother" style="width:120px; height:120px; object-fit:cover; border-radius:50%; border:3px solid rgba(255,255,255,0.3); box-shadow:0 0 20px rgba(255,105,180,0.6); margin-bottom:15px;">
+      <h4 style="margin-bottom:5px;">Nikhil Dandolu</h4>
+      <p style="margin:0;">It's Me</p>
+      <p style="margin:0;">Age: 21</p>
+       <p style="margin:0;">Occupation:Student</p>
+    </div>
+    
+    <!-- Back Side -->
+    <div class="card-back">
+      <h4 style="margin-bottom:10px;">More About Him</h4>
+      <p style="margin:0; font-size:0.95rem; line-height:1.5;">
+        My brother, Rahul Dandolu, is energetic and ambitious.  
+        His enthusiasm, determination, and supportive nature  
+        make him an inspiring part of my life and our family.
+      </p>
+    </div>
+    
+  </div>
+</div>
+
+
+  </div>
+
+</section>
+
+
+  </div>
+
+</section> 
+<!-- Skills Section -->
+<section id="skills" 
+  style="width:100%; padding:60px 10%; color:#fff; display:flex; flex-direction:column; align-items:center; gap:50px;
+         background: rgba(255,255,255,0.08);
+         backdrop-filter: blur(15px);
+         -webkit-backdrop-filter: blur(15px);
+         border: 1px solid rgba(255,255,255,0.25);
+         border-radius: 25px;
+         box-shadow: 0 8px 35px rgba(255,105,180,0.35);">
+
+
+  <!-- Main Heading -->
+  <h1 style="text-align:center; font-size:3rem; margin-bottom:40px; position:relative; display:inline-block;">
+    My Skills
+    <span style="display:block; width:140px; height:4px; background:linear-gradient(45deg, #ff8acb, #d63384); margin:10px auto 0; border-radius:2px;"></span>
+  </h1>
+
+  <!-- Skills Row -->
+  <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:30px; width:100%; max-width:1200px;">
+
+    <!-- Technical Skills Card -->
+    <div style="flex:1; min-width:300px; background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:30px; box-shadow:0 8px 30px rgba(255,105,180,0.3); text-align:center;">
+      <h2 style="margin-bottom:20px;">Technical Skills</h2>
+      <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:25px;">
+
+       <div class="skill-card">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
+       alt="Python" 
+       onclick="showSkillInfo('Python')" 
+       style="width:40px; height:40px; cursor:pointer;">
+</div>
+        <div class="skill-card">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" 
+       alt="Flask" 
+       onclick="showSkillInfo('Flask')" 
+       style="width:40px; height:40px; cursor:pointer;">
+</div>
+      <div class="skill-card">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" 
+       alt="MySQL" 
+       onclick="showSkillInfo('MySQL')" 
+       style="width:40px; height:40px; cursor:pointer;">
+</div>
+        <div class="skill-card">
+  <img src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" 
+       alt="Excel" 
+       onclick="showSkillInfo('Excel')" 
+       style="width:40px; height:40px; cursor:pointer;">
+</div>
+<div class="skill-card">
+  <img src="https://img.icons8.com/color/96/power-bi.png" 
+       alt="PowerBI" 
+       onclick="showSkillInfo('PowerBI')" 
+       style="width:40px; height:40px; cursor:pointer;">
+</div>
+      </div>
+    </div>
+
+    <!-- Communication Skills Card -->
+     <div class="skills-container">
+    <div style="flex:1; min-width:300px; background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border:1px solid rgba(255,255,255,0.3); border-radius:20px; padding:30px; box-shadow:0 8px 30px rgba(255,105,180,0.3); text-align:center;">
+      <h2 style="margin-bottom:20px;">Communication Skills</h2>
+      <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:25px;">
+
+    <div class="skill-card" onclick="this.classList.toggle('active')">
+  <img src="https://img.icons8.com/color/96/teamwork.png" 
+       alt="Teamwork" 
+       style="width:40px; height:40px; cursor:pointer;">
+</div>
+        <div class="skill-card">
+  <img src="https://img.icons8.com/color/96/conference.png" 
+       alt="Leadership" 
+       onclick="showSkillInfo('Leadership')" 
+       style="width:40px; height:40px; cursor:pointer;">
+</div>
+      <div class="skill-card">
+        <img src="https://img.icons8.com/color/96/microphone.png"
+         alt="Public Speaking"
+         onclick="showSkillInfo('Public Speaking')"
+          style="width:40px; height:40px; cursor:pointer;">
+      </div>
+      <div class="skill-card">
+        <img src="https://img.icons8.com/color/96/idea.png"
+         alt="Problem Solving"
+         onclick="showSkillInfo('Problem Solving')"
+          style="width:40px; height:40px; cursor:pointer;">
+      </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="projects-section" 
+  style="width:100%; padding:60px 10%; color:#fff; display:flex; flex-direction:column; align-items:center; gap:50px;
+         background: rgba(255,255,255,0.08); 
+         backdrop-filter: blur(15px); 
+         -webkit-backdrop-filter: blur(15px); 
+         border:1px solid rgba(255,255,255,0.2); 
+         border-radius:25px; 
+         box-shadow:0 8px 40px rgba(255,105,180,0.3);">
+
+
+  <!-- Heading -->
+  <h1 class="section-title">My Projects</h1>
+
+  <!-- Project Cards -->
+  <div class="projects-container">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="images/quizapp.jpg" alt="Quiz App">
+      <div class="project-content">
+        <h2>Quiz App</h2>
+        <p>A dynamic quiz web app with score tracking, timer, and responsive layout.</p>
+        <a href="https://github.com/nikhildeshmuk98" target="_blank" class="project-btn">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="images/tic-tac-toe.jpg" alt="Tic Tac Toe">
+      <div class="project-content">
+        <h2>Tic Tac Toe Game</h2>
+        <p>An interactive Python-based game with reset and winner display features.</p>
+        <a href="https://github.com/nikhildeshmuk98" target="_blank" class="project-btn">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="images/portfolio.png" alt="Portfolio">
+      <div class="project-content">
+        <h2>Portfolio Website</h2>
+        <p>A responsive personal portfolio with glassmorphism design & interactive sections.</p>
+        <a href="https://github.com/nikhildeshmuk98" target="_blank" class="project-btn">View Project</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Certifications Section -->
+<section id="certifications" class="cert-section" 
+  style="width:90%; margin:60px auto; padding:60px 40px; background:rgba(255,255,255,0.08); backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.25); border-radius:25px; box-shadow:0 8px 30px rgba(255,105,180,0.3); color:#fff;">
+  
+  <h1 class="section-title">Certifications</h1>
+
+  <!-- Navigation Arrows -->
+  <button id="prev" class="arrow left">&#10094;</button>
+  <button id="next" class="arrow right">&#10095;</button>
+
+  <!-- Glass Card -->
+  <div class="cert-display">
+    <div class="cert-slides">
+      <img src="images/certificate.png.jpg" alt="Certification 1" class="cert-img active">
+      <img src="images/nyreas.png.jpg" alt="Certification 2" class="cert-img">
+      <img src="images/IBM.png.jpg" alt="Certification 3" class="cert-img">
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<!-- Contact Section -->
+<section id="contact" 
+  style="width:100%; min-height:100vh; padding:60px 10%; color:#fff; display:flex; flex-direction:column; align-items:center; gap:40px;
+         background: rgba(255,255,255,0.08); 
+         backdrop-filter: blur(15px); 
+         -webkit-backdrop-filter: blur(15px); 
+         border:1px solid rgba(255,255,255,0.2); 
+         border-radius:25px; 
+         box-shadow:0 8px 40px rgba(255,105,180,0.3);">
+
+
+  <h1>Contact <span></span></h1>
+
+  <div class="contact-container">
+
+    <!-- Card 1: Profile + Socials -->
+    <div class="contact-card">
+      <img src="images/officer.png.png" alt="Developer">
+      <div class="contact-social">
+        <div class="icon-card small-card">
+  <a href="https://github.com/nikhildeshmuk98" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+<div class="icon-card small-card">
+  <a href="https://www.linkedin.com/in/nikhil-deshmuk-a9122b33b" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
+</div>
+
+<div class="icon-card small-card">
+  <a href="https://wa.me/916309872249" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<div class="icon-card small-card">
+  <a href="mailto:nikhildeshmuk98@gmail.com" target="_blank">
+    <i class="fas fa-envelope"></i>
+  </a>
+</div>
+        
+      </div>
+      <p>Let’s connect! I’m open to collaborations and opportunities.</p>
+    </div>
+
+    <!-- Card 2: Contact Form -->
+<!-- Glass Contact Form Card -->
+<div class="contact-card">
+  <form action="https://formspree.io/f/xblawdbq" method="POST">
+    <h2>📩 Get in Touch</h2>
+    
+    <div class="form-group">
+      
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    </div>
+
+    <div class="form-group">
+    
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="form-group">
+    
+      <input type="text" id="subject" name="subject" placeholder="Enter subject">
+    </div>
+
+    <div class="form-group">
+      
+      <textarea id="message" name="message" placeholder="Type your message..." required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">
+      Send Message <i class="fas fa-paper-plane"></i>
+    </button>
+  </form>
+
+
+
+  </div>
+</section>
+<!-- Footer -->
+<!-- Footer -->
+<footer class="footer-glass">
+  <h2 class="footer-name">Nikhil Dandolu</h2>
+
+  <div class="footer-social">
+          <div class="icon-card small-card">
+  <a href="https://github.com/nikhildeshmuk98" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+<div class="icon-card small-card">
+  <a href="https://www.linkedin.com/in/nikhil-deshmuk-a9122b33b" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
+</div>
+
+<div class="icon-card small-card">
+  <a href="https://wa.me/916309872249" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+<div class="icon-card small-card">
+  <a href="mailto:nikhildeshmuk98@gmail.com" target="_blank">
+    <i class="fas fa-envelope"></i>
+  </a>
+</div>
+   
+  </div>
+
+  <p class="footer-copy">© 2025 All Rights Reserved</p>
+</footer>
+
+
+
+
+
+      <script src="script.js"></script>
+</body>
+</html>
+

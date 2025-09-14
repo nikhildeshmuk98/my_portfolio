@@ -1,0 +1,1099 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: radial-gradient(circle at 20% 30%, #ff8acb, #d63384, #4a003d);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Pink Ocean Bubbles Background (constant for all sections) */
+.bubbles {
+  position: fixed;   /* fixed so it stays behind all content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bubbles span {
+  position: absolute;
+  bottom: -150px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,192,203,0.8), rgba(255,182,193,0.2));
+  box-shadow: 0 0 25px rgba(255,105,180,0.6);
+  animation: rise 20s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(0.5);
+  }
+  100% {
+    transform: translateY(-110vh) scale(1);
+  }
+}
+
+/* Sections padding to avoid navbar overlap */
+section {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+/* Navigation (no glass card) */
+.glass-nav {
+  position: fixed;       
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: transparent;  /* no glass card */
+}
+
+/* Left side (Profile) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.6);
+  box-shadow: 0 0 15px rgba(255,192,203,0.6);
+}
+
+.profile-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,192,203,0.7);
+}
+
+/* Right side (Menu links) */
+.nav-right a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.nav-right a:hover {
+  background: rgba(255, 182, 193, 0.25);
+  color: #ffaad4;
+  box-shadow: 0 0 15px rgba(255,192,203,0.6);
+  transform: translateY(-2px);
+}
+
+.nav-right a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background: linear-gradient(45deg, #ff8acb, #ff6ec4, #d63384);
+  transition: width 0.3s;
+  border-radius: 2px;
+}
+
+.nav-right a:hover::after {
+  width: 100%;
+}
+
+/* Home Section */
+.home-section {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 10%;
+  position: relative;
+  z-index: 1;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+}
+
+/* Left Side */
+.home-left {
+  flex: 1;
+}
+
+.home-left h2 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.home-left .name {
+  background: linear-gradient(45deg, #ff6a9d, #d63384);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.typing-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffd1e6;
+  height: 40px;
+  margin-bottom: 25px;
+}
+
+/* Buttons */
+.hero-buttons .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  margin-right: 15px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.hero-buttons .btn:hover {
+  background: rgba(255, 182, 193, 0.3);
+  box-shadow: 0 0 15px rgba(255,192,203,0.6);
+  transform: translateY(-3px);
+}
+
+.hero-buttons .btn-primary {
+  background: linear-gradient(45deg, #ff6a9d, #d63384);
+  border: none;
+}
+
+/* Right Side */
+.home-right {
+  flex: 1;
+  text-align: center;
+}
+
+/* Profile + Social Icons */
+.profile-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* spacing between profile and icons */
+}
+
+.home-profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 40px rgba(255, 105, 180, 0.6);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff6a9d;
+  text-shadow: 0 0 20px rgba(255, 105, 180, 0.9);
+  transform: scale(1.2);
+}
+
+/* About Section */
+.about-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10%;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.about-left {
+  flex: 1;
+}
+
+.about-left h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.about-left p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #ffd6e8;
+}
+
+.about-right {
+  flex: 1;
+  text-align: center;
+}
+
+.about-profile-pic {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 40px rgba(255,105,180,0.6);
+}
+
+/* Footer */
+.footer {
+  margin-top: 50px;
+  padding: 25px 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.95rem;
+}
+/* Projects Section */
+.projects-section {
+  width: 100%;
+  padding: 60px 10%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 160px;
+  height: 4px;
+  background: linear-gradient(45deg, #ff8acb, #d63384);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Project Cards Container */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+}
+
+/* Project Card */
+.project-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(255, 105, 180, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(255, 105, 180, 0.5);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  opacity: 0.85;
+}
+
+.project-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff8acb, #d63384);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+  background: linear-gradient(45deg, #ff6ec4, #d63384);
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+}
+/* Certifications Section */
+.cert-section {
+  width: 100%;
+  padding: 80px 10%;
+  color: #fff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 180px;
+  height: 4px;
+  background: linear-gradient(45deg, #ff8acb, #d63384);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.arrow {
+  display: none;  /* hide by default */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+
+/* Glass Card */
+.cert-display {
+  max-width: 800px;
+  height: 500px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(255, 105, 180, 0.25);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Cross-Fade Slideshow */
+.cert-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.cert-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  border-radius: 16px;
+}
+.cert-img.active {
+  opacity: 1;
+}
+/* Contact Section */
+/* ================= Contact Section ================= */
+#contact {
+  width: 100%;
+  padding: 60px 10%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+#contact h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+#contact h1 span {
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(45deg, #ff8acb, #d63384);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Contact Cards Container */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Glass Card (both profile & form) */
+.contact-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(255, 105, 180, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(255, 105, 180, 0.5);
+}
+
+/* Developer Image */
+.contact-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 40px rgba(255, 105, 180, 0.6);
+  margin-bottom: 25px;
+}
+
+/* Social Icons */
+.contact-social {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-social a {
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-social a:hover {
+  transform: scale(1.2);
+  color: #ff8acb;
+}
+
+/* Contact Form */
+.contact-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-card input,
+.contact-card textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.contact-card button {
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff8acb, #d63384);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-card button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+/* ================= Simple Footer ================= */
+/* ================= Full Width Glass Footer ================= */
+.footer-glass {
+  width: 100%;
+  padding: 50px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 -8px 30px rgba(255, 105, 180, 0.3);
+  color: #fff;
+}
+
+/* Footer Title */
+.footer-glass .footer-name {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff8acb, #d63384);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+/* Social Icons */
+.footer-glass .footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.footer-glass .footer-social a {
+  color: #fff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-glass .footer-social a:hover {
+  color: #ff8acb;
+  transform: scale(1.2);
+}
+
+/* Copy Text */
+.footer-glass .footer-copy {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+
+/* ================= Glass Navigation ================= */
+.glass-nav {
+  width: 90%;
+  margin: 20px auto;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+}
+
+.glass-nav a {
+  color: #fff;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.glass-nav a:hover {
+  color: #ff8acb;
+}
+/*contact card extra css */
+.contact-card {
+  background: rgba(255, 255, 255, 0.1); /* glassmorphism effect */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px 30px;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto; /* centers the card */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.contact-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-card li {
+  margin: 12px 0;
+}
+/*personal details extra css*/
+.glass-card {
+  list-style: none;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: fit-content;
+  margin: 20px auto;
+  color: #fff;
+  font-size: 16px;
+}
+
+.glass-card li {
+  margin: 8px 0;
+}
+/*htdrdr*/
+.glass-card {
+  list-style: none;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: fit-content;
+  margin: 20px auto;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 0 15px rgba(255, 0, 128, 0.6); /* 🌸 Pink glow default */
+  transition: all 0.4s ease-in-out;
+}
+
+.glass-card li {
+  margin: 8px 0;
+}
+
+/* 🌸 Stronger pink shine on hover */
+.glass-card:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 128, 0.9),
+              0 0 50px rgba(255, 0, 128, 0.7);
+  background: rgba(255, 192, 203, 0.2);
+}
+/*hobbies card extra css*/
+.hobbies-card {
+    list-style: none;
+    padding: 20px 40px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0 0 15px rgba(255, 0, 128, 0.6); /* Pink glow default */
+    transition: all 0.4s ease-in-out;
+
+    display: flex;              /* Items side by side */
+    justify-content: center;    /* Center horizontally */
+    gap: 20px;                  /* Space between items */
+    flex-wrap: wrap;            /* Wrap if screen is small */
+    margin: 20px auto;
+    width: fit-content;
+  }
+
+  .hobbies-card li {
+    margin: 0;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Pink shine on hover */
+  .hobbies-card:hover {
+    box-shadow: 0 0 25px rgba(255, 0, 128, 0.9),
+                0 0 50px rgba(255, 0, 128, 0.7);
+    background: rgba(255, 192, 203, 0.2);
+  }
+
+  /* Slight scale effect on each hobby item when hovered */
+  .hobbies-card li:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+ /*css for light and dark mode toggle button*/
+ /* Toggle Button */
+.theme-toggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: 15px;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.theme-toggle:hover {
+  transform: rotate(20deg) scale(1.1);
+  color: #ff9dff;
+}
+
+body.dark-mode {
+  background: linear-gradient(135deg, #2e003e, #3d0066, #5c007a);
+  color: #f8f4ff;
+}
+
+body.dark-mode nav.glass-nav,
+body.dark-mode section,
+body.dark-mode .contact-card,
+body.dark-mode footer {
+  background: rgba(45, 0, 60, 0.65) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f8f4ff;
+  box-shadow: 0 0 25px rgba(200, 100, 255, 0.4);
+}
+/*css for the ion in the hero section */
+/* Mini Card */
+.small-card {
+  width: 50px;   /* reduced size */
+  height: 50px;
+  display: flex;                 /* center the icon */
+  justify-content: center;       /* horizontal center */
+  align-items: center;           /* vertical center */
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease-in-out;
+  margin: 10px;
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.4); /* default */
+}
+
+.small-card a {
+  color: #fff;
+  font-size: 1.4rem;  /* icon size */
+  text-decoration: none;
+}
+
+
+/* 🌞 Light Mode (Pink Glow) */
+body:not(.dark-mode) .small-card {
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.6);
+}
+body:not(.dark-mode) .small-card:hover {
+  box-shadow: 0 0 16px rgba(255, 105, 180, 0.9);
+}
+
+/* 🌙 Dark Mode (Blue Glow) */
+body.dark-mode .small-card {
+  box-shadow: 0 0 8px rgba(0, 150, 255, 0.6);
+}
+body.dark-mode .small-card:hover {
+  box-shadow: 0 0 16px rgba(0, 150, 255, 0.9);
+}
+
+/*flip card in family setails*/
+.family-card {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+}
+
+.family-card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border:1px solid rgba(255,255,255,0.3);
+  box-shadow:0 8px 30px rgba(255,105,180,0.3);
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/*css of the mother card in the personal details section */
+.family-card {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+}
+
+.family-card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border:1px solid rgba(255,255,255,0.3);
+  box-shadow:0 8px 30px rgba(255,105,180,0.3);
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/*glass card communication sectiom icons 1*/
+.skill-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.skill-card.active {
+  background: rgba(0, 123, 255, 0.25);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.5);
+}
+
+/**contact section glass card form spree **/
+
+.contact-card {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px 25px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.contact-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.contact-card .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.contact-card input,
+.contact-card textarea {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  outline: none;
+  resize: vertical;
+}
+
+.contact-card input::placeholder,
+.contact-card textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-card .submit-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-card .submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+}
+/*updated contact form details with beautiful details*/
+.contact-card {
+  max-width: 550px;
+  margin: 50px auto;
+  padding: 35px 30px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  animation: fadeInUp 0.8s ease;
+}
+
+.contact-card h2 {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 2rem;
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-card .subtitle {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #e0e0e0;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00f2fe;
+  box-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+}
+
+.form-group textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 242, 254, 0.4);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
